@@ -1,0 +1,35 @@
+Array ( 
+	[Search] => Array ( 
+		[0] => Array ( 
+			[Title] => Batman Begins 
+			[Year] => 2005 
+			[imdbID] => tt0372784 
+			[Type] => movie 
+		[1] => Array ( 
+			[Title] => The Batman 
+			[Year] => 2022 
+			[imdbID] => tt1877830 
+			[Type] => movie 
+		[2] => Array ( 	
+			[Title] => Batman v Superman: Dawn of Justice 
+			[Year] => 2016 
+			[imdbID] => tt2975590 
+			[Type] => movie 
+		 ...
+
+	[totalResults] => 561 
+	[Response] => True )
+
+-------------------
+
+$data_convertido = json_decode($data, true);
+echo $data_convertido["totalResults"];  // en pantalla 561
+var_dump($data_convertido["Search"]);  
+echo $data_convertido["Search"][0]["Type"]; //en pantalla movie
+echo $data_convertido["Search"][1]["Title"];   //The Batman
+echo $data_convertido["Response"];  // En pantalla True
+echo $data_convertido["Search"][1];
+
+
+
+
